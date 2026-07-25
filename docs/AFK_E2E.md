@@ -1,4 +1,4 @@
-# AFK End-to-End Testing Note
+# AFK E2E
 
 This file was generated automatically by AFK during Phase 5 end-to-end
 testing. It exists to verify that documentation changes can be created and
