@@ -1,20 +1,23 @@
-# Contributing
+# Contributing to bragbit
 
-This page is a short pointer for contributors browsing `/docs`. The full guide lives
-in the repo root:
+Looking to contribute? Start here, then head to the full guides in the repo root
+for everything else:
 
-- [`CONTRIBUTING.md`](../CONTRIBUTING.md) — local setup, branch/PR workflow, commit
-  conventions, and coverage requirements.
-- [`CODE_OF_CONDUCT.md`](../CODE_OF_CONDUCT.md) — expected behavior for everyone
-  participating in the project (issues, PRs, discussions).
+- [`CONTRIBUTING.md`](../CONTRIBUTING.md) — the canonical guide: local setup,
+  branching and PR workflow, commit message conventions, and coverage expectations.
+- [`CODE_OF_CONDUCT.md`](../CODE_OF_CONDUCT.md) — the standard of behavior we expect
+  from everyone taking part in issues, pull requests, and discussions.
 
-## Quick start
+## Getting up and running
+
+Install dependencies and run the unit tests with:
 
 ```bash
-pnpm install   # install dependencies (Node 22+, pnpm 10+ via Corepack)
-pnpm test      # run the unit test suite (Vitest); DB-gated suites skip automatically
+pnpm install   # Node 22+ and pnpm 10+ (via Corepack) are required
+pnpm test      # runs the Vitest unit suite; DB-backed suites skip automatically
 ```
 
-See the root [`CONTRIBUTING.md`](../CONTRIBUTING.md) for the full development setup
-(Docker dev stack, migrations, seeding), the complete list of `pnpm` scripts
-(`lint`, `typecheck`, `test:db`, `test:e2e`, …), and the PR/commit conventions.
+That's enough to start hacking on most changes. For anything beyond that — the
+Docker-based dev stack, database migrations and seeding, the rest of the `pnpm`
+scripts (`lint`, `typecheck`, `test:db`, `test:e2e`, …), and how we expect PRs and
+commits to be structured — see the root [`CONTRIBUTING.md`](../CONTRIBUTING.md).
