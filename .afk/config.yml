@@ -35,5 +35,38 @@ preview:
   enabled: true
   requireLabel: afk-preview # mandatory — bragbit is public
 
+# Phase 9 — before/after screenshots in the PR body. bragbit renders nothing without a
+# database (src/lib/env.ts requires DATABASE_URL + BETTER_AUTH_SECRET at import; `/` and every
+# (app) route query the DB), so the capture stack brings up a DISPOSABLE one on the task
+# network and runs the repo's own db:push + seed:demo against it. No real credential is
+# involved: these values are minted for a container that dies with the task, and the demo
+# account is already committed in scripts/seed-demo.mjs. Applies to the dev-server container
+# ONLY — the agent's job container still gets OPENROUTER_API_KEY and nothing else.
+screenshot:
+  enabled: true
+  framework: next-app # derive routes from changed src/app/**/page.tsx; falls back to `routes`
+  routes: ["/dashboard"] # used when a changed file maps to no URL (a shared component, CSS)
+  port: 3000
+  readySeconds: 420 # install + db:push + seed:demo + next dev cold compile
+  services:
+    - image: postgres:17-alpine
+      alias: db
+      env:
+        POSTGRES_USER: afk
+        POSTGRES_PASSWORD: afk
+        POSTGRES_DB: app
+  env:
+    DATABASE_URL: postgres://afk:afk@db:5432/app
+    BETTER_AUTH_SECRET: afk-screenshot-placeholder-0123456789abcdef
+    APP_URL: http://app:3000
+    INSTANCE_MODE: private-solo
+  commands:
+    migrate: pnpm db:push # drizzle-kit push — no migration files needed
+    seed: pnpm seed:demo # idempotent, fixed ids; creates the demo owner below
+  login:
+    path: /sign-in
+    email: demo@bragbit.local # committed demo credentials (scripts/seed-demo.mjs)
+    password: demobragbit
+
 pr:
   labels: ["afkgnt"]
