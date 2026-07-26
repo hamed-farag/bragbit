@@ -8,9 +8,7 @@ export default async function AdminPage() {
   const isOrg = workspace.type === "organization";
 
   return (
-    // Branding is a form, not a table — keep it at a readable measure inside the
-    // wider admin column (the members table uses the full width).
-    <div className="flex max-w-2xl flex-col gap-8">
+    <div className="flex flex-col gap-8">
       <header>
         <h1 className="font-serif text-[28px] leading-tight font-semibold tracking-[-0.01em]">
           Workspace
