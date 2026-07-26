@@ -58,7 +58,12 @@ screenshot:
   env:
     DATABASE_URL: postgres://afk:afk@db:5432/app
     BETTER_AUTH_SECRET: afk-screenshot-placeholder-0123456789abcdef
-    APP_URL: http://app:3000
+    # Must match AFK's dev-server network alias (APP_ALIAS in src/screenshot/capture.ts).
+    # NOT `app`: .app is an HSTS-preloaded gTLD, so Chrome force-upgrades http://app:3000
+    # to HTTPS. And this value is better-auth's trustedOrigins — if it disagrees with the
+    # host the browser actually uses, sign-in is rejected and every capture screenshots
+    # the login page instead (docs/DEPLOY.md §13-J).
+    APP_URL: http://devserver:3000
     INSTANCE_MODE: private-solo
   commands:
     migrate: pnpm db:migrate # drizzle-kit migrate — applies src/lib/db/migrations.
