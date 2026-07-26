@@ -6,7 +6,7 @@ version: 1
 image: node:22 # corepack enables pnpm
 
 commands:
-  install: corepack enable && pnpm install --frozen-lockfile
+  install: install: corepack enable && pnpm install --frozen-lockfile --ignore-scripts
   test: pnpm test # plain vitest — needs no env (test:db / e2e are off-limits in v0)
   lint: pnpm lint
   typecheck: pnpm typecheck
