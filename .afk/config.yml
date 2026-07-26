@@ -11,6 +11,10 @@ commands:
   lint: pnpm lint
   typecheck: pnpm typecheck
   build: pnpm build
+  # Screenshots serve a real BUILD, not the dev server: `next dev`'s client JS never
+  # hydrates in AFK's sandbox, which leaves forms inert — the sign-in silently does
+  # nothing and every capture photographs the login page (docs/DEPLOY.md §13-J).
+  start: pnpm start
   dev: pnpm dev
 
 paths:
