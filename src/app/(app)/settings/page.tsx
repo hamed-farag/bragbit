@@ -73,7 +73,7 @@ export default async function SettingsPage({
   const documentOptions: DocumentOption[] = documents.map((d) => ({ id: d.id, title: d.title }));
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="content-wide flex flex-col gap-8">
       <header>
         <h1 className="font-serif text-[28px] leading-tight font-semibold tracking-[-0.01em]">
           Account settings
