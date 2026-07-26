@@ -66,7 +66,8 @@ screenshot:
     APP_URL: http://devserver:3000
     INSTANCE_MODE: private-solo
   commands:
-    migrate: pnpm db:migrate # drizzle-kit migrate — applies src/lib/db/migrations.
+    migrate:
+      pnpm db:migrate # drizzle-kit migrate — applies src/lib/db/migrations.
       # NOT db:push: drizzle-kit push needs a TTY to confirm, and in a container it fails
       # the prompt but still exits 0, so the chain marches on to a seed with no schema.
     seed: pnpm seed:demo # idempotent, fixed ids; creates the demo owner below
