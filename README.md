@@ -103,6 +103,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). This project follows
 [Keep a Changelog](https://keepachangelog.com/). By participating you agree to the
 [Code of Conduct](CODE_OF_CONDUCT.md). For security issues, see [SECURITY.md](SECURITY.md).
 
+## Team
+
+- **AFKGNT** — a core contributor to bragbit, working on feature development, code review, and documentation improvements across the project.
+
 ## License
 
 [AGPL-3.0](LICENSE) — network copyleft keeps hosted forks open-source.
