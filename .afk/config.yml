@@ -33,7 +33,7 @@ limits:
   timeoutMinutes: 20
 
 model:
-  default: moonshotai/kimi-k2.5
+  default: anthropic/claude-sonnet-5
 
 preview:
   enabled: true
