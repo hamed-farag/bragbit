@@ -105,7 +105,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). This project follows
 
 ## Team
 
-- **AFKGNT** — a new member participating in the bragbit repo
+- **AFKGNT** — a core contributor to bragbit, working on feature development, code review, and documentation improvements across the project.
 
 ## License
 
