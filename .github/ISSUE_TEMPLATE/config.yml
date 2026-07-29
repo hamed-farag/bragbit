@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Security vulnerability
-    url: https://github.com/hamedafarag/bragbit/security/advisories/new
+    url: https://github.com/hamed-farag/bragbit/security/advisories/new
     about: Please report security issues privately (see SECURITY.md) — never in a public issue.
   - name: Question / discussion
-    url: https://github.com/hamedafarag/bragbit/discussions
+    url: https://github.com/hamed-farag/bragbit/discussions
     about: Ask questions and discuss ideas in Discussions.

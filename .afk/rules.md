@@ -1,5 +1,5 @@
 <!-- bragbit → .afk/rules.md -->
-<!-- Copy this to `.afk/rules.md` in hamedafarag/bragbit. Advisory only — fed to
+<!-- Copy this to `.afk/rules.md` in hamed-farag/bragbit. Advisory only — fed to
      the model, enforces nothing. Anything that MUST hold belongs in config.yml,
      where code checks it. See PLAN.md §5. -->
 
