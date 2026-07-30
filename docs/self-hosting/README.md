@@ -9,6 +9,11 @@ up the app and Postgres, runs migrations, and serves the first-run setup wizard.
   for S3 storage). The recommended self-host path.
 - **[Dokploy](dokploy.md)** — the reference deployment: the Compose stack on a private VPS with a
   domain and automatic TLS, managed through Dokploy's UI.
+- **[Dokploy for an organization](dokploy-org.md)** — the full ORG-mode (`private-org`) runbook: a
+  company self-hosting for its whole team, from provisioning to inviting members, plus SMTP, storage,
+  backups, upgrades, and a hardening checklist.
+- **[Dokploy for yourself](dokploy-solo.md)** — the SOLO-mode (`private-solo`) runbook: a personal
+  single-user instance (a workspace of one), same deploy path minus the invitation/member setup.
 - **[Vercel + managed Postgres](vercel.md)** — a serverless variant (Vercel + Neon), with the
   caveats serverless brings (S3 storage, external cron, manual migrations).
 - **[Backup, restore & upgrades](backup-and-upgrades.md)** — protecting your data and moving to a
